@@ -7,6 +7,10 @@ const app = express()
 
 app.use(cors())
 
+app.get('/frontend', (req, res) => {
+    res.render('index.html')
+})
+
 app.get('/word', (req, res) => {
     const options = {
         method: 'GET',
